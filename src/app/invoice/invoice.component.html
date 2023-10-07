@@ -1,0 +1,20 @@
+<ul *ngIf="facture?.active; else mssg">
+  <li>
+    Montant Facture:  {{facture?.idFacture}}
+  </li><li>
+    Date Facture:  {{facture?.dateFacture}}
+  </li><li>
+    statut Facture:  {{facture?.active}}
+  </li><li>
+    Montant Facture:  {{facture?.montantFacture}}
+  </li><li>
+    Montant Remise Facture:  {{facture?.montantRemise}}
+
+  </li>
+</ul>
+<ng-template #mssg> Impossible de visualiser les détails
+  de la facture</ng-template>
+
+<a routerLink="/MainInvoice">Retour</a>
+<button (click)="retourPagePrecedente()">Retour à la page précédente</button>
+
